@@ -1,14 +1,23 @@
 About
 =====
 
-The [Jupyter notebook containers](https://github.com/jupyter/docker-stacks) are currently lacking the capability to talk to SQL databases.
+A frequently occurring usecase in Jupyter notebooks is to read from and write data to a database.
 
-This repository contains a PoC demonstrating integration with Microsoft SQL Server using Microsoft's ODBC driver and ``pyodbc``.
+This repository contains a Docker recipe for [jupyter/docker-stacks](https://github.com/jupyter/docker-stacks), which cooks up an additional layer providing support for Microsoft SQL Server. In your notebooks you can use ``pyodbc`` and ``sqlalchemy`` to interact with the database.
+
+Available images
+================
+
+The following images are built using GitHub Actions:
+
+| Source container                                                                               | Build status 
+| ---------------------------------------------------------------------------------------------- | ------------- |
+| [tensorflow-notebook](https://github.com/jupyter/docker-stacks/tree/main/tensorflow-notebook)  | [![Build status](https://github.com/Realiserad/jupyter-pyodbc-demo/actions/workflows/tensorflow-notebook.yml/badge.svg?event=push&branch=main)](https://github.com/Realiserad/jupyter-pyodbc-demo/actions/workflows/tensorflow-notebook.yml) |
 
 Try it out
 ==========
 
-The repository bundles a ``docker-compose.yml`` which spins up a Jupyter notebook and an ephemeral instance of Microsoft SQL Server.
+In the [examples folder](https://github.com/Realiserad/jupyter-pyodbc-demo/tree/master/example) you can find a ``docker-compose.yml`` which spins up a Jupyter notebook and an ephemeral instance of Microsoft SQL Server.
 ```
 docker-compose up
 ```

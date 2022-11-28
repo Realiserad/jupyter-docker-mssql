@@ -1,5 +1,4 @@
-# https://github.com/jupyter/docker-stacks
-FROM jupyter/tensorflow-notebook
+FROM registry.hub.docker.com/jupyter/tensorflow-notebook
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 

@@ -30,6 +30,8 @@ jobs:
         images: ghcr.io/realiserad/tensorflow-notebook-mssql
         flavor: |
           latest=true
+        tags: |
+          type=schedule,pattern={{date 'YYYYMMDD'}}
     - name: Build an image and push it to ghcr.io
       uses: docker/build-push-action@v3
       with:

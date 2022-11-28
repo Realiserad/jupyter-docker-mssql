@@ -4,6 +4,8 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 USER root
 
+ENV MSSQL_DRIVER "ODBC Driver 18 for SQL Server"
+
 RUN apt update && \
     apt install -y curl gnupg2 && \
     curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add - && \

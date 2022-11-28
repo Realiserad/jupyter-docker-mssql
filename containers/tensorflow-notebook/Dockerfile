@@ -1,5 +1,7 @@
 FROM jupyter/tensorflow-notebook
 
+LABEL org.opencontainers.image.source "https://github.com/Realiserad/jupyter-docker-mssql"
+
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 USER root

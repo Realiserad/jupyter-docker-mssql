@@ -12,12 +12,12 @@ The following images are built using GitHub Actions:
 
 | Source container                                                                               | Build status 
 | ---------------------------------------------------------------------------------------------- | ------------- |
-| [tensorflow-notebook](https://github.com/jupyter/docker-stacks/tree/main/tensorflow-notebook)  | [![Build status](https://github.com/Realiserad/jupyter-pyodbc-demo/actions/workflows/tensorflow-notebook.yml/badge.svg?event=push&branch=main)](https://github.com/Realiserad/jupyter-pyodbc-demo/actions/workflows/tensorflow-notebook.yml) |
+| [tensorflow-notebook](https://github.com/jupyter/docker-stacks/tree/main/tensorflow-notebook)  | [![Build status](https://github.com/Realiserad/jupyter-docker-mssql/actions/workflows/tensorflow-notebook.yml/badge.svg?event=push&branch=main)](https://github.com/Realiserad/jupyter-docker-mssql/actions/workflows/tensorflow-notebook.yml) |
 
 Try it out
 ==========
 
-In the [examples folder](https://github.com/Realiserad/jupyter-pyodbc-demo/tree/master/example) you can find a ``docker-compose.yml`` which spins up a Jupyter notebook and an ephemeral instance of Microsoft SQL Server.
+In the [examples folder](https://github.com/Realiserad/jupyter-docker-mssql/tree/master/example) you can find a ``docker-compose.yml`` which spins up a Jupyter notebook and an ephemeral instance of Microsoft SQL Server.
 ```
 docker-compose up
 ```

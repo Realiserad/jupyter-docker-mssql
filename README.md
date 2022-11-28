@@ -1,3 +1,5 @@
+[![Driver](https://img.shields.io/badge/Driver-ODBC%20Driver%2018%20for%20SQL%20Server-blue)](https://learn.microsoft.com/en-us/sql/connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac?view=sql-server-ver16#1812-november-2022)
+
 About
 =====
 

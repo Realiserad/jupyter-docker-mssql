@@ -1,4 +1,4 @@
-FROM registry.hub.docker.com/jupyter/tensorflow-notebook
+FROM jupyter/tensorflow-notebook
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 

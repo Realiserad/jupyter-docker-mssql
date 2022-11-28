@@ -1,4 +1,4 @@
-[![Driver](https://img.shields.io/badge/Driver-ODBC%20Driver%2018%20for%20SQL%20Server-blue)](https://learn.microsoft.com/en-us/sql/connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac?view=sql-server-ver16#1812-november-2022)
+[![Driver](https://img.shields.io/badge/Driver-ODBC%20Driver%2018%20for%20SQL%20Server-blue)](https://learn.microsoft.com/en-us/sql/connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac?view=sql-server-ver16#1812-november-2022) [![Compatibility](https://img.shields.io/badge/Compatible%20with-SQL%20Server%202019-green?logo=microsoftsqlserver)](https://www.microsoft.com/en-us/sql-server/sql-server-2019)
 
 About
 =====

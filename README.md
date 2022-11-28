@@ -5,7 +5,7 @@ About
 
 A frequently occurring usecase in Jupyter notebooks is to read from and write data to a database.
 
-This repository contains a Docker recipe for [jupyter/docker-stacks](https://github.com/jupyter/docker-stacks), which cooks up an additional layer providing support for Microsoft SQL Server. In your notebooks you can use ``pyodbc`` and ``sqlalchemy`` to interact with the database.
+This repository contains a Docker recipe for [jupyter/docker-stacks](https://github.com/jupyter/docker-stacks), which cooks up an additional layer providing support for Microsoft SQL Server. In your notebooks you can use ``pyodbc`` and ``sqlalchemy`` to interact with the database. See [the test notebook](https://github.com/Realiserad/jupyter-docker-mssql/blob/main/example/notebooks/Test.ipynb) for a Python sample.
 
 Available images
 ================

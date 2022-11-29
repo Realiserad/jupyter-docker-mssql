@@ -12,15 +12,5 @@ jobs:
           docker-compose up -d
       - name: Wait for database readiness...
         run: sleep 70
-      - name: Debug container availability
-        run: |
-          echo "Docker images with name: example_notebook"
-          docker ps --filter name=example_notebook --format '{{.ID}}'
-          echo "All containers"
-          docker ps -a
-          echo "grep for example_notebook container"
-          docker ps -a | grep example_notebook | awk '{ print $1 }'
-          echo "Logs!"
-          docker logs $(docker ps -a | grep example_notebook | awk '{ print $1 }')
       - name: Run the test notebook
-        run: docker exec -u root -it $(docker ps --filter name=example_notebook --format '{{.ID}}') jupyter nbconvert --to notebook --execute Test.ipynb
+        run: docker exec -u root $(docker ps --filter name=example_notebook --format '{{.ID}}') jupyter nbconvert --to notebook --execute Test.ipynb

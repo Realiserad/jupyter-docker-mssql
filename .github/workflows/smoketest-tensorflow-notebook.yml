@@ -14,5 +14,11 @@ jobs:
         uses: whatnick/wait-action@master
         with:
           time: '70s'
+      - name: Debug container availability
+        run: |
+          echo "Docker images with name: example_notebook"
+          docker ps --filter name=example_notebook --format '{{.ID}}'
+          echo "All containers"
+          docker ps
       - name: Run the test notebook
         run: docker exec -u root -it $(docker ps --filter name=example_notebook --format '{{.ID}}') jupyter nbconvert --to notebook --execute Test.ipynb

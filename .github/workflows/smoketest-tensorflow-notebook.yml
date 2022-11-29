@@ -11,9 +11,7 @@ jobs:
           cd example
           docker-compose up -d
       - name: Wait for database readiness...
-        uses: whatnick/wait-action@master
-        with:
-          time: '70s'
+        run: sleep 70
       - name: Debug container availability
         run: |
           echo "Docker images with name: example_notebook"

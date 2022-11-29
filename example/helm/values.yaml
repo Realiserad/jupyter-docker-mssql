@@ -1,0 +1,5 @@
+singleuser:
+  image:
+    name: ghcr.io/realiserad/tensorflow-notebook-mssql
+    tag: latest
+  cmd: null

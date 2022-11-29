@@ -9,10 +9,10 @@ jobs:
       - name: Start the test environment
         run: |
           cd example
-          docker-compose up
+          docker-compose up -d
       - name: Wait for database readiness...
         uses: whatnick/wait-action@master
         with:
-          time: '40s'
+          time: '70s'
       - name: Run the test notebook
         run: docker exec -u root -it $(docker ps --filter name=example_notebook --format '{{.ID}}') jupyter nbconvert --to notebook --execute Test.ipynb

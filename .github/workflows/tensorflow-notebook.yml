@@ -6,6 +6,8 @@ on:
     branches:
       - 'main'
 jobs:
+  smoketest:
+    uses: ./.github/workflows/smoketest-tensorflow-notebook.yml
   publish-container:
     runs-on: ubuntu-latest
     if: ${{ !contains(github.event.head_commit.message, '#nobuild') }}

@@ -12,7 +12,7 @@ Available images
 
 The following images are built weekly using GitHub Actions:
 
-| Source container                                                                               | Build status 
+| Source container                                                                               | Build status
 | ---------------------------------------------------------------------------------------------- | ------------- |
 | [tensorflow-notebook](https://github.com/jupyter/docker-stacks/tree/main/tensorflow-notebook)  | [![Build status](https://github.com/Realiserad/jupyter-docker-mssql/actions/workflows/tensorflow-notebook.yml/badge.svg?event=push&branch=main)](https://github.com/Realiserad/jupyter-docker-mssql/actions/workflows/tensorflow-notebook.yml) |
 
@@ -24,5 +24,5 @@ In the [examples folder](https://github.com/Realiserad/jupyter-docker-mssql/tree
 docker-compose up
 ```
 
-The test notebook can be accessed using [this link](http://127.0.0.1:8888/lab/workspaces/auto-L/tree/Test.ipynb) or by manually 
-typing ``http://127.0.0.1:8888`` into the browser.
+The test notebook can be accessed using [this link](http://127.0.0.1:8888/lab/workspaces/auto-L/tree/Test.ipynb?token=foo123) or by manually
+typing ``http://127.0.0.1:8888`` into the browser and logging in with the token ``foo123``.

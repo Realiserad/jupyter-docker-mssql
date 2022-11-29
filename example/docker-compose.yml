@@ -11,11 +11,11 @@ services:
   notebook:
     build: ../containers/tensorflow-notebook
     environment:
-      - JUPYTER_TOKEN=
+      - JUPYTER_TOKEN=foo123
       - MSSQL_SA_PASSWORD=d5RxC2Vt@3g9R
     ports:
       - 8888:8888
     depends_on:
       - db
     volumes:
-      - ./notebooks:/home/jovyan
+      - ./notebooks/Test.ipynb:/home/jovyan/Test.ipynb

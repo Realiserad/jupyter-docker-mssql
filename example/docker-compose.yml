@@ -9,7 +9,7 @@ services:
       - 1433:1433
     hostname: db
   notebook:
-    build: ../tensorflow-notebook
+    build: ../containers/tensorflow-notebook
     environment:
       - JUPYTER_TOKEN=
       - MSSQL_SA_PASSWORD=d5RxC2Vt@3g9R

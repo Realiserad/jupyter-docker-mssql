@@ -1,2 +1,3 @@
 example/notebooks/.*
+example/notebooks/*.nbconvert.ipynb
 *.swp

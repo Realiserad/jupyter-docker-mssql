@@ -19,8 +19,10 @@ The following images are built weekly using GitHub Actions:
 Try it out
 ==========
 
-In the [examples folder](https://github.com/Realiserad/jupyter-docker-mssql/tree/master/example) you can find a ``docker-compose.yml`` which spins up a Jupyter notebook and an ephemeral instance of Microsoft SQL Server.
+In the [examples folder](https://github.com/Realiserad/jupyter-docker-mssql/tree/master/example), you can find a script for generating a ``docker-compose.yml`` which spins up a Jupyter notebook, and an ephemeral instance of Microsoft SQL Server.
 ```
+cd example
+sh create_docker_compose.sh "jupyter/tensorflow-notebook" "mcr.microsoft.com/mssql/server:2019-latest"
 docker-compose up
 ```
 

@@ -37,7 +37,9 @@ jobs:
     - name: Build an image and push it to ghcr.io
       uses: docker/build-push-action@v3
       with:
-        context: containers/tensorflow-notebook
+        context: containers/generic-notebook
+        build-args: |
+          BASE_IMAGE=jupyter/tensorflow-notebook
         platforms: linux/amd64
         push: ${{ github.event_name != 'pull_request' }}
         tags: ${{ steps.meta.outputs.tags }}

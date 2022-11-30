@@ -1,4 +1,6 @@
-FROM jupyter/tensorflow-notebook
+ARG BASE_IMAGE=jupyter/tensorflow-notebook
+
+FROM $BASE_IMAGE
 
 LABEL org.opencontainers.image.source "https://github.com/Realiserad/jupyter-docker-mssql"
 

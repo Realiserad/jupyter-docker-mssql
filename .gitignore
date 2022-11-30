@@ -1,3 +1,4 @@
 example/notebooks/.*
 example/notebooks/*.nbconvert.ipynb
 *.swp
+example/docker-compose.yml

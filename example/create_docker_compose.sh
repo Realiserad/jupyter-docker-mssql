@@ -7,4 +7,4 @@ NOTEBOOK_IMAGE=$1
 DATABASE_IMAGE=$2
 export NOTEBOOK_IMAGE DATABASE_IMAGE
 echo "🔨 Creating docker-compose.yml for notebook '$NOTEBOOK_IMAGE' with database '$DATABASE_IMAGE'."
-cat ./compose-template.yml | envsubst > docker-compose.yml
+cat "$(dirname "$0")/compose-template.yml" | envsubst > "$(dirname "$0")/docker-compose.yml"

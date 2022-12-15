@@ -19,7 +19,6 @@ RUN apt update --yes --no-install-recommends && \
     ACCEPT_EULA=Y apt install --yes \
     msodbcsql18 \
     python3-pyodbc && \
-    python3 -m pip install pyodbc && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Switch back to jovyan to avoid accidental container runs as root

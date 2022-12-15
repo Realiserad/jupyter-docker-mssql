@@ -1,4 +1,4 @@
-[![Driver](https://img.shields.io/badge/Driver-ODBC%20Driver%2018%20for%20SQL%20Server-blue)](https://learn.microsoft.com/en-us/sql/connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac?view=sql-server-ver16#1812-november-2022) [![Compatibility](https://img.shields.io/badge/Compatible%20with-SQL%20Server%202019-green?logo=microsoftsqlserver)](https://www.microsoft.com/en-us/sql-server/sql-server-2019)
+[![Driver](https://img.shields.io/badge/Driver-ODBC%20Driver%2018%20for%20SQL%20Server-blue)](https://learn.microsoft.com/en-us/sql/connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac?view=sql-server-ver16#1812-november-2022) [![Compatibility](https://img.shields.io/badge/Compatible%20with-SQL%20Server%202019-green?logo=microsoftsqlserver)](https://learn.microsoft.com/en-us/sql/connect/odbc/windows/system-requirements-installation-and-driver-files?view=sql-server-ver16#sql-version-compatibility)
 
 About
 =====
@@ -19,8 +19,10 @@ The following images are built weekly using GitHub Actions:
 Try it out
 ==========
 
-In the [examples folder](https://github.com/Realiserad/jupyter-docker-mssql/tree/master/example) you can find a ``docker-compose.yml`` which spins up a Jupyter notebook and an ephemeral instance of Microsoft SQL Server.
+In the [examples folder](https://github.com/Realiserad/jupyter-docker-mssql/tree/master/example), you can find a script for generating a ``docker-compose.yml`` which spins up a Jupyter notebook, and an ephemeral instance of Microsoft SQL Server.
 ```
+cd example
+sh create_docker_compose.sh "jupyter/tensorflow-notebook" "mcr.microsoft.com/mssql/server:2019-latest"
 docker-compose up
 ```
 

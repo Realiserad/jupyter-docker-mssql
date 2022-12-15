@@ -17,7 +17,7 @@ COPY package.list /etc/apt/sources.list.d/microsoft.list
 
 RUN apt update --yes --no-install-recommends && \
     ACCEPT_EULA=Y apt install --yes \
-    msodbcsql18 \
+    msodbcsql18 && \
     python3 -m pip install pyodbc && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 

@@ -15,8 +15,8 @@ ENV PATH="/opt/mssql-tools18/bin:${PATH}"
 COPY key.gpg /usr/share/keyrings/microsoft.gpg
 COPY package.list /etc/apt/sources.list.d/microsoft.list
 
-RUN apt update --yes --no-install-recommends && \
-    ACCEPT_EULA=Y apt install --yes msodbcsql18 && \
+RUN apt update --yes && \
+    ACCEPT_EULA=Y apt install --yes --no-install-recommends msodbcsql18 && \
     python3 -m pip install pyodbc && \
     apt clean && rm -rf /var/lib/apt/lists/*
 

@@ -2,21 +2,23 @@ ARG BASE_IMAGE=jupyter/tensorflow-notebook
 
 FROM $BASE_IMAGE
 
+LABEL org.opencontainers.image.title "jupyter-mssql"
+LABEL org.opencontainers.image.description "Jupyter notebook container with support for Microsoft SQL Server"
 LABEL org.opencontainers.image.source "https://github.com/Realiserad/jupyter-docker-mssql"
-
-SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+LABEL org.opencontainers.image.authors "Bastian Fredriksson"
 
 USER root
 
 ENV MSSQL_DRIVER "ODBC Driver 18 for SQL Server"
+ENV PATH="/opt/mssql-tools18/bin:${PATH}"
 
 COPY key.gpg /usr/share/keyrings/microsoft.gpg
 COPY package.list /etc/apt/sources.list.d/microsoft.list
 
-RUN apt update && \
-    ACCEPT_EULA=Y apt install -y msodbcsql18 && \
-    echo 'export PATH="$PATH:/opt/mssql-tools18/bin"' >> ~/.bashrc && \
-    source ~/.bashrc && \
-    apt -y install python3-pyodbc && \
-    pip3 install pyodbc && \
-    apt clean
+RUN apt update --yes && \
+    ACCEPT_EULA=Y apt install --yes --no-install-recommends msodbcsql18 && \
+    python3 -m pip install pyodbc && \
+    apt clean && rm -rf /var/lib/apt/lists/*
+
+# Switch back to jovyan to avoid accidental container runs as root
+USER ${NB_UID}

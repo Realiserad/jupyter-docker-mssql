@@ -40,6 +40,7 @@ jobs:
         context: containers/generic-notebook
         build-args: |
           BASE_IMAGE=jupyter/tensorflow-notebook
+          IMAGE_SOURCE=${{ github.repository }}
         platforms: linux/amd64
         push: ${{ github.event_name != 'pull_request' }}
         tags: ${{ steps.meta.outputs.tags }}

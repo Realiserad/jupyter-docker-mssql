@@ -1,10 +1,11 @@
 ARG BASE_IMAGE=jupyter/tensorflow-notebook
+ARG IMAGE_SOURCE=Realiserad/jupyter-docker-mssql
 
 FROM $BASE_IMAGE
 
 LABEL org.opencontainers.image.title "jupyter-mssql"
 LABEL org.opencontainers.image.description "Jupyter notebook container with support for Microsoft SQL Server"
-LABEL org.opencontainers.image.source "https://github.com/Realiserad/jupyter-docker-mssql"
+LABEL org.opencontainers.image.source "https://github.com/$IMAGE_SOURCE"
 LABEL org.opencontainers.image.authors "Bastian Fredriksson"
 
 USER root

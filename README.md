@@ -10,7 +10,7 @@ This repository contains a Docker recipe for [jupyter/docker-stacks](https://git
 Available images
 ================
 
-The following images are built weekly using GitHub Actions:
+The following images are built weekly in the [upstream repository](https://github.com/Realiserad/jupyter-docker-mssql) using GitHub Actions:
 
 | Source container                                                                               | Build status
 | ---------------------------------------------------------------------------------------------- | ------------- |
@@ -28,3 +28,8 @@ docker-compose up
 
 The test notebook can be accessed using [this link](http://127.0.0.1:8888/lab/workspaces/auto-L/tree/Test.ipynb?token=foo123) or by manually
 typing ``http://127.0.0.1:8888`` into the browser and logging in with the token ``foo123``.
+
+Roll your own
+=============
+
+You can build and distribute your own container images by forking this repository. Note that the workflows use cron-scheduled actions, and these are disabled in forks by default. I would recommend to remove the cron from the workflow file and then manually enable the workflows for which you want images to be built and published.

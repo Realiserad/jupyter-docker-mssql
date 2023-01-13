@@ -10,7 +10,7 @@ This repository contains a Docker recipe for [jupyter/docker-stacks](https://git
 Available images
 ================
 
-The following images are built weekly in the [upstream repository](https://github.com/Realiserad/jupyter-docker-mssql) using GitHub Actions:
+The following images are built weekly using GitHub Actions:
 
 | Source container                                                                               | Build status
 | ---------------------------------------------------------------------------------------------- | ------------- |

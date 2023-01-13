@@ -1,8 +1,7 @@
 name: Build tensorflow-notebook
 on:
-# Disable the scheduled weekly Monday build
-#  schedule:
-#    - cron: "0 6 * * 1"
+  schedule:
+    - cron: "0 6 * * 1"
   push:
     branches:
       - 'main'

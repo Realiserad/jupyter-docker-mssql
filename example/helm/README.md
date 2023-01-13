@@ -19,4 +19,4 @@ helm upgrade --cleanup-on-fail \
 minikube service --namespace notebooks proxy-public
 ```
 
-Note that the ``values.yaml`` is configured to pull the image tagged with ``latest``, and in production you probably want to use a specific image. Each image is tagged with the date it was built, e.g. ``20221128``.
+Note that the ``values.yaml`` is configured to pull the image tagged with ``latest``, and in production you probably want to use a specific image. Each image is tagged with the date it was built, e.g. ``20230113``.

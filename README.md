@@ -5,21 +5,21 @@ About
 
 A frequently occurring usecase in Jupyter notebooks is to read from and write data to a database.
 
-This repository contains a Docker recipe for [jupyter/docker-stacks](https://github.com/jupyter/docker-stacks), which cooks up an additional layer providing support for Microsoft SQL Server. In your notebooks you can use ``pyodbc`` and ``sqlalchemy`` to interact with the database. See [the test notebook](https://github.com/malmostad/jupyter-docker-mssql/blob/main/example/notebooks/Test.ipynb) for a Python sample.
+This repository contains a Docker recipe for [jupyter/docker-stacks](https://github.com/jupyter/docker-stacks), which cooks up an additional layer providing support for Microsoft SQL Server. In your notebooks you can use ``pyodbc`` and ``sqlalchemy`` to interact with the database. See [the test notebook](https://github.com/Realiserad/jupyter-docker-mssql/blob/main/example/notebooks/Test.ipynb) for a Python sample.
 
 Available images
 ================
 
-The following images are built weekly in the [upstream repository](https://github.com/malmostad/jupyter-docker-mssql) using GitHub Actions:
+The following images are built weekly in the [upstream repository](https://github.com/Realiserad/jupyter-docker-mssql) using GitHub Actions:
 
 | Source container                                                                               | Build status
 | ---------------------------------------------------------------------------------------------- | ------------- |
-| [tensorflow-notebook](https://github.com/jupyter/docker-stacks/tree/main/tensorflow-notebook)  | [![Build status](https://github.com/malmostad/jupyter-docker-mssql/actions/workflows/tensorflow-notebook.yml/badge.svg?event=push&branch=main)](https://github.com/malmostad/jupyter-docker-mssql/actions/workflows/tensorflow-notebook.yml) |
+| [tensorflow-notebook](https://github.com/jupyter/docker-stacks/tree/main/tensorflow-notebook)  | [![Build status](https://github.com/Realiserad/jupyter-docker-mssql/actions/workflows/tensorflow-notebook.yml/badge.svg?event=push&branch=main)](https://github.com/Realiserad/jupyter-docker-mssql/actions/workflows/tensorflow-notebook.yml) |
 
 Try it out
 ==========
 
-In the [examples folder](https://github.com/malmostad/jupyter-docker-mssql/tree/master/example), you can find a script for generating a ``docker-compose.yml`` which spins up a Jupyter notebook, and an ephemeral instance of Microsoft SQL Server.
+In the [examples folder](https://github.com/Realiserad/jupyter-docker-mssql/tree/master/example), you can find a script for generating a ``docker-compose.yml`` which spins up a Jupyter notebook, and an ephemeral instance of Microsoft SQL Server.
 ```
 cd example
 sh create_docker_compose.sh "jupyter/tensorflow-notebook" "mcr.microsoft.com/mssql/server:2019-latest"

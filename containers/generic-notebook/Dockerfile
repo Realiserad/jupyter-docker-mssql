@@ -1,5 +1,5 @@
 ARG BASE_IMAGE=jupyter/tensorflow-notebook
-ARG IMAGE_SOURCE=malmostad/jupyter-docker-mssql
+ARG IMAGE_SOURCE=Realiserad/jupyter-docker-mssql
 
 FROM $BASE_IMAGE
 

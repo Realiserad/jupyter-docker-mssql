@@ -40,7 +40,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: ghcr.io/${{ github.repository_owner }}/${{ matrix.base_image }}-mssql
+          images: ghcr.io/${{ github.repository_owner }}/${{ matrix.base_images }}-mssql
           flavor: |
             latest=true
           tags: |

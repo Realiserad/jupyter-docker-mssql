@@ -21,11 +21,11 @@ RUN apt update --yes && \
     python3 -m pip install pyodbc && \
     apt clean && rm -rf /var/lib/apt/lists/*
 
-# Switch back to jovyan to avoid accidental container runs as root
-USER ${NB_UID}
-
 # Make sure sqlalchemy is present
 RUN mamba install --quiet --yes "sqlalchemy" && \
     mamba clean --all -f -y && \
     fix-permissions "${CONDA_DIR}" && \
     fix-permissions "/home/${NB_USER}"
+
+# Switch back to jovyan to avoid accidental container runs as root
+USER ${NB_UID}

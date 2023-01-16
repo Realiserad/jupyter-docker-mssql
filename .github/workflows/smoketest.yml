@@ -1,4 +1,4 @@
-name: Smoketest tensorflow-notebook
+name: Smoketest
 on:
   pull_request:
   workflow_call:
@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Generate docker-compose.yml
-        run: sh example/create_docker_compose.sh "jupyter/tensorflow-notebook" "mcr.microsoft.com/mssql/server:2019-latest"
+        run: sh example/create_docker_compose.sh "jupyter/minimal-notebook" "mcr.microsoft.com/mssql/server:2019-latest"
       - name: Start the test environment
         run: |
           cd example

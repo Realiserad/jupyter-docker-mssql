@@ -1,4 +1,4 @@
-[![Driver](https://img.shields.io/badge/Driver-ODBC%20Driver%2018%20for%20SQL%20Server-blue)](https://learn.microsoft.com/en-us/sql/connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac?view=sql-server-ver16#1812-november-2022) [![Compatibility](https://img.shields.io/badge/Compatible%20with-SQL%20Server%202019-green?logo=microsoftsqlserver)](https://learn.microsoft.com/en-us/sql/connect/odbc/windows/system-requirements-installation-and-driver-files?view=sql-server-ver16#sql-version-compatibility)
+[![Driver](https://img.shields.io/badge/Driver-ODBC%20Driver%2018%20for%20SQL%20Server-blue)](https://learn.microsoft.com/en-us/sql/connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac?view=sql-server-ver16#1812-november-2022) [![Compatibility](https://img.shields.io/badge/Compatible%20with-SQL%20Server%202019-green?logo=microsoftsqlserver)](https://learn.microsoft.com/en-us/sql/connect/odbc/windows/system-requirements-installation-and-driver-files?view=sql-server-ver16#sql-version-compatibility) [![Build status](https://github.com/Realiserad/jupyter-docker-mssql/actions/workflows/build_and_publish.yml/badge.svg?event=push&branch=main)](https://github.com/Realiserad/jupyter-docker-mssql/actions/workflows/build_and_publish.yml)
 
 About
 =====
@@ -10,11 +10,15 @@ This repository contains a Docker recipe for [jupyter/docker-stacks](https://git
 Available images
 ================
 
-The following images are built weekly using GitHub Actions:
+Containers based on the following images are built and published weekly to ``ghcr.io`` using GitHub Actions:
 
-| Source container                                                                               | Build status
-| ---------------------------------------------------------------------------------------------- | ------------- |
-| [tensorflow-notebook](https://github.com/jupyter/docker-stacks/tree/main/tensorflow-notebook)  | [![Build status](https://github.com/Realiserad/jupyter-docker-mssql/actions/workflows/tensorflow-notebook.yml/badge.svg?event=push&branch=main)](https://github.com/Realiserad/jupyter-docker-mssql/actions/workflows/tensorflow-notebook.yml) |
+- jupyter/minimal-notebook
+- jupyter/r-notebook
+- jupyter/scipy-notebook
+- jupyter/tensorflow-notebook
+- jupyter/datascience-notebook
+- jupyter/pyspark-noteboo
+- jupyter/all-spark-notebook
 
 Try it out
 ==========
@@ -22,7 +26,7 @@ Try it out
 In the [examples folder](https://github.com/Realiserad/jupyter-docker-mssql/tree/master/example), you can find a script for generating a ``docker-compose.yml`` which spins up a Jupyter notebook, and an ephemeral instance of Microsoft SQL Server.
 ```
 cd example
-sh create_docker_compose.sh "jupyter/tensorflow-notebook" "mcr.microsoft.com/mssql/server:2019-latest"
+sh create_docker_compose.sh "jupyter/minimal-notebook" "mcr.microsoft.com/mssql/server:2019-latest"
 docker-compose up
 ```
 

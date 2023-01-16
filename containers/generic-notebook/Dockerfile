@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=jupyter/tensorflow-notebook
+ARG BASE_IMAGE=jupyter/minimal-notebook
 ARG IMAGE_SOURCE=Realiserad/jupyter-docker-mssql
 
 FROM $BASE_IMAGE
@@ -23,3 +23,9 @@ RUN apt update --yes && \
 
 # Switch back to jovyan to avoid accidental container runs as root
 USER ${NB_UID}
+
+# Make sure sqlalchemy is present
+RUN mamba install --quiet --yes "sqlalchemy" && \
+    mamba clean --all -f -y && \
+    fix-permissions "${CONDA_DIR}" && \
+    fix-permissions "/home/${NB_USER}"

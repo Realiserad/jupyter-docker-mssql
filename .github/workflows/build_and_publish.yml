@@ -16,13 +16,13 @@ jobs:
       fail-fast: true
       matrix:
         base_image:
-         - jupyter/minimal-notebook
-         - jupyter/r-notebook
-         - jupyter/scipy-notebook
-         - jupyter/tensorflow-notebook
-         - jupyter/datascience-notebook
-         - jupyter/pyspark-notebook
-         - jupyter/all-spark-notebook
+         - minimal-notebook
+         - r-notebook
+         - scipy-notebook
+         - tensorflow-notebook
+         - datascience-notebook
+         - pyspark-notebook
+         - all-spark-notebook
     steps:
       - name: Checkout the code from GitHub
         uses: actions/checkout@v3
@@ -51,7 +51,7 @@ jobs:
         with:
           context: containers/generic-notebook
           build-args: |
-            BASE_IMAGE=${{ matrix.base_image }}
+            BASE_IMAGE=jupyter/${{ matrix.base_image }}
             IMAGE_SOURCE=${{ github.repository }}
           platforms: linux/amd64
           push: ${{ github.event_name != 'pull_request' }}

@@ -21,7 +21,7 @@ jobs:
          - jupyter/scipy-notebook
          - jupyter/tensorflow-notebook
          - jupyter/datascience-notebook
-         - jupyter/pyspark-noteboo
+         - jupyter/pyspark-notebook
          - jupyter/all-spark-notebook
     steps:
       - name: Checkout the code from GitHub
